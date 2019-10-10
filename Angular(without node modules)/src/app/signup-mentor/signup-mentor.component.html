@@ -1,0 +1,112 @@
+<app-navbar></app-navbar>
+<main>
+  <section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 bg-gradient-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container pt-lg-md">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card bg-secondary shadow border-0">
+
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <small>Sign up with your credentials</small>
+              </div>
+              <form role="form" [formGroup]="signupForm" (submit)="onSubmit()" [ngClass]="{'has-error':signupForm.get('name').errors && signupForm.get('email').errors && signupForm.get('password').errors && signupForm.get('confirmpassword').errors && signupForm.get('experience').errors && signupForm.get('url').errors}">
+                <div class="form-group" [ngClass]="{'focused':focus===true}">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Name" formControlName="name" type="text" (focus)="focus=true" (blur)="focus=false">
+                  </div>
+                  <span class="help-block" *ngIf="signupForm.get('name').errors">
+                    <span *ngIf="signupForm.get('name').errors.required">name is required</span></span>
+                </div>
+                <div class="form-group" [ngClass]="{'focused':focus1===true}">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Email" formControlName="email" type="email" (focus)="focus1=true" (blur)="focus1=false">
+                  </div>
+                  <span class="help-block" *ngIf="signupForm.get('email').errors">
+                    <span *ngIf="signupForm.get('email').errors.required">email is required</span></span>
+                </div>
+                <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Password" formControlName="password" type="password" (focus)="focus2=true" (blur)="focus2=false">
+                  </div>
+                  <span class="help-block" *ngIf="signupForm.get('password').errors">
+                    <span *ngIf="signupForm.get('password').errors.required">password is required</span></span>
+                </div>
+                <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Confirm Password" formControlName="confirmpassword" type="password" (focus)="focus2=true" (blur)="focus2=false">
+                  </div>
+                  <span class="help-block" *ngIf="signupForm.get('confirmpassword').errors">
+                    <span *ngIf="signupForm.get('confirmpassword').errors.required">confirm password is required</span></span>
+                </div>
+
+               
+<div class="text-muted">
+              KNOWN TECHNOLOGIES</div>
+              <label class="checkbox-inline col" *ngFor="let x of temp" ><input type="checkbox" value="{{x.techName}}">{{x.techName}}</label>
+            
+        
+  <br>
+<div class="form-group" [ngClass]="{'focused':focus2===true}">
+  <div class="input-group input-group-alternative">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="ni ni-briefcase-24"></i></span>
+    </div>
+    <input class="form-control" placeholder="Experience(in years)" formControlName="experience" type="text" (focus)="focus2=true" (blur)="focus2=false">
+  </div>
+  <span class="help-block" *ngIf="signupForm.get('experience').errors">
+    <span *ngIf="signupForm.get('experience').errors.required">experience is required</span></span>
+</div>
+<div class="form-group" [ngClass]="{'focused':focus2===true}">
+  <div class="input-group input-group-alternative">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="ni ni-chart-bar-32"></i></span>
+    </div>
+    <input class="form-control" placeholder="LinkedIn Url" formControlName="url" type="text" (focus)="focus2=true" (blur)="focus2=false">
+  </div> <span class="help-block" *ngIf="signupForm.get('url').errors">
+    <span *ngIf="signupForm.get('url').errors.required">LinkedIn Url is required</span></span>
+</div>
+                <div class="text-muted ">
+                  <small>
+                    <span class="text-success font-weight-700"><a href="#">verify email</a></span>
+                  </small>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-default mt-4">Create account</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+  </section>
+</main>

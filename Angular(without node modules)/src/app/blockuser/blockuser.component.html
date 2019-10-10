@@ -1,0 +1,64 @@
+<app-navbaradmin></app-navbaradmin>
+<section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 bg-gradient-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span><br>
+    </div><br>
+<div><div class="row">
+        <div class="col-lg-3">
+            </div><strong>Active Users:</strong></div></div>
+    <section id="team" class="pb-10">
+        <div class="container">
+            <div class="row" *ngFor="let x of user">
+                    
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title"><strong>Name : </strong>{{x.userName}}</h4>
+                                        <p class="card-text"><strong>Email : </strong>{{x.userEmail}}</p>
+                                        <p class="card-text"><strong>Education : </strong>{{x.userEducation}}</p>
+                                        <p class="card-text"><strong>Status : </strong>{{x.status}}</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">-----------------------------------------------
+                                        <h4 class="card-title"></h4>
+                                        <p class="card-text"></p>
+                                        <div class="text-center">
+
+
+                                            
+                                                <button  type="submit" (click)="block(x.userName)"class="btn btn-default my-4">
+                                                    
+                                                    Block</button>
+                                              </div><br>
+                                      -----------------------------------------------                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                </div>
+            
+        </div>
+
+        
+    </section>
+    </section>

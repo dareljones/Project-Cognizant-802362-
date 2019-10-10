@@ -1,0 +1,39 @@
+<app-navbaradmin></app-navbaradmin>
+<section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 bg-gradient-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span><br>
+    </div> <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+    <div style="color:white;">
+    Current Technologies:
+    <ul><div >
+        <li *ngFor="let x of temp" >{{x.techName}}<a (click)="remove(x.techName)"><i class="ni ni-fat-remove"></i></a></li>
+           </div>
+    </ul>
+    </div>
+    </div>
+    <div class="col-md-2">
+        <div class="text-left" style="color:white;">
+            Add Technology:
+           <br> <br>
+           <form form role="form" [formGroup]="form" (ngSubmit)='add()'>
+              <div>
+                <input type="text" formControlName="add" placeholder="Add new technology"/><br><br>
+                <button class="btn btn-info" name="submit" value="submit">Add</button>
+              </div>
+            </form>
+            </div>
+    </div>
+    <div class="col-md-4">
+    </div>
+    </div>    <br><br><br><br><br><br>
+
+      </section>

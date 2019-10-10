@@ -1,0 +1,150 @@
+<app-navbar></app-navbar>
+<main ng-app="myApp" ng-controller="myCtrl">
+  <div class="position-relative">
+   
+    <section class="section section-lg section-shaped pb-250">
+      <div class="shape shape-style-1 shape-default">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="container py-lg-md d-flex">
+
+        <div class="col-md-6 order-lg-2 ml-lg-auto">
+          <div class="position-relative pl-md-5">
+            <img src="./assets/img/ill/ill-2.svg" class="img-center img-fluid">
+          </div>
+        </div>
+        <div class="col px-0">
+          <div class="row">
+            <div class="col-lg-6">
+              <h1 class="display-3  text-white">Welcome to
+                <span>MENTOR<br>ON<br>DEMAND</span>
+              </h1>
+              <p class="lead  text-white">The system allows to easily search for qualified mentors with great expertise in technologies of your choice.</p>
+              <div class="btn-wrapper">
+                <a href="#search1" class="btn btn-info btn-icon mb-3 mb-sm-0">
+                  <span class="btn-inner--icon"><i class="fa fa-search"></i></span>
+                  <span class="btn-inner--text">Search For Mentors</span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<br><br><br><br><br><br><br><br>
+      <section id="search1">
+          <div class="container">
+      
+                    <h4 class="display-3 ml-center text-white">Search For Mentors</h4>
+                <div class="card shadow shadow-lg--hover mt-6">
+                  <div class="card-body">
+      
+                    <section class="search-sec">
+          <form action="#" method="post" novalidate="novalidate">
+                  <div class="col-lg-12">
+                      <div class="row">
+                        
+                       
+                          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <input list="exampleFormControlSelect2" class="form-control" placeholder="TECHNOLOGY">
+                            <datalist class="search-slt" id="exampleFormControlSelect2">
+                                <div >
+                                    <option *ngFor="let x of temp" >{{x.techName}}</option>
+                                       </div>
+                                  
+                            </datalist>                        </div>
+      
+      
+                          <div class="col-md-7 mt-4 mt-md-0">
+                            <div class="input-daterange datepicker row align-items-center">
+                              <div class="col">
+                                <div class="form-group" [ngClass]="{'focused':focus3===true}">
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                    </div>
+                                    <input class="form-control datepicker" placeholder="FROM" name="dp1" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker" (click)="d1.toggle()" (select)="mama($event)" type="text" [dayTemplate]="t" (dateSelect)="startDateChanged($event)" autocomplete="off" (focus)="focus3=true" (blur)="focus3=false"/>
+                                    <ng-template #t let-date let-focused="focused" >
+                                     <span class="custom-day"
+                                      [class.text-white]="isActive(date)"
+                                      [class.range-end]="isRangeEnd(date)"
+                                      [class.range-start]="isRangeStart(date)"
+                                      [class.btn-light]="isActive(date)"
+                                      [class.bg-primary]="isActive(date)"
+                                      [class.range]="isInRange(date)"
+                                      [class.faded]="isInRange(date)"
+                                     >
+                                       {{ date.day }}
+                                     </span>
+                                   </ng-template>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="form-group" [ngClass]="{'focused':focus4===true}">
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                    </div>
+                                    <input class="form-control datepicker" placeholder="TO" name="dp2" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()" (focus)="focus4=true" (blur)="focus4=false" type="text" [dayTemplate]="t1" (dateSelect)="endDateChanged($event)" autocomplete="off"/>
+                                    <ng-template #t1 let-date let-focused="focused" >
+                                     <span class="custom-day"
+                                      [class.text-white]="isActive(date)"
+                                      [class.range-end]="isRangeEnd(date)"
+                                      [class.range-start]="isRangeStart(date)"
+                                      [class.btn-light]="isActive(date)"
+                                      [class.bg-primary]="isActive(date)"
+                                      [class.range]="isInRange(date)"
+                                      [class.faded]="isInRange(date)"
+                                     >
+                                       {{ date.day }}
+                                     </span>
+                                   </ng-template>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+      
+                          </div>
+                          <div class="col-md-2">
+                              <a [routerLink]="['/search']"><button type="button" class="btn btn-info wrn-btn">Search</button></a>
+      
+      
+                        </div>
+      
+                    </div>
+      
+                  </div>
+          </form>
+      
+      </section>
+      
+      
+                  </div>
+                </div>
+      
+      
+      <br><br><br><br><br>
+          </div>
+          <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+          </div>
+        </section>
+      
+    </section>
+
+  </div>
+
+
+
+ 

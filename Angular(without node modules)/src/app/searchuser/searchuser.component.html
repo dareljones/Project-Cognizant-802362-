@@ -1,0 +1,111 @@
+<app-navbaruser></app-navbaruser>
+<main class="profile-page">
+    <section class="section section-shaped section-lg">
+        <div class="shape shape-style-1 bg-gradient-warning">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </div>
+
+
+
+      <section id="search1">
+        <div class="container">
+<br><br><br><br><br><br><br><br><br>
+              <div class="card shadow shadow-lg--hover mt-6">
+                <div class="card-body">
+
+                      <section class="search-sec">
+            <form action="#" method="post" novalidate="novalidate">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                              <input list="exampleFormControlSelect2" class="form-control" placeholder="TECHNOLOGY">
+                              <datalist class="search-slt" id="exampleFormControlSelect2">
+                                  <div >
+                                    <option *ngFor="let x of temp" >{{x.techName}}</option>                                         </div>
+                              </datalist>                        </div>
+
+
+                            <div class="col-md-7 mt-4 mt-md-0">
+                              <div class="input-daterange datepicker row align-items-center">
+                                <div class="col">
+                                  <div class="form-group" [ngClass]="{'focused':focus3===true}">
+                                    <div class="input-group">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                      </div>
+                                      <input class="form-control datepicker" placeholder="FROM" name="dp1" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker" (click)="d1.toggle()" (select)="mama($event)" type="text" [dayTemplate]="t" (dateSelect)="startDateChanged($event)" autocomplete="off" (focus)="focus3=true" (blur)="focus3=false"/>
+                                      <ng-template #t let-date let-focused="focused" >
+                                       <span class="custom-day"
+                                        [class.text-white]="isActive(date)"
+                                        [class.range-end]="isRangeEnd(date)"
+                                        [class.range-start]="isRangeStart(date)"
+                                        [class.btn-light]="isActive(date)"
+                                        [class.bg-primary]="isActive(date)"
+                                        [class.range]="isInRange(date)"
+                                        [class.faded]="isInRange(date)"
+                                       >
+                                         {{ date.day }}
+                                       </span>
+                                     </ng-template>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="form-group" [ngClass]="{'focused':focus4===true}">
+                                    <div class="input-group">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                      </div>
+                                      <input class="form-control datepicker" placeholder="TO" name="dp2" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()" (focus)="focus4=true" (blur)="focus4=false" type="text" [dayTemplate]="t1" (dateSelect)="endDateChanged($event)" autocomplete="off"/>
+                                      <ng-template #t1 let-date let-focused="focused" >
+                                       <span class="custom-day"
+                                        [class.text-white]="isActive(date)"
+                                        [class.range-end]="isRangeEnd(date)"
+                                        [class.range-start]="isRangeStart(date)"
+                                        [class.btn-light]="isActive(date)"
+                                        [class.bg-primary]="isActive(date)"
+                                        [class.range]="isInRange(date)"
+                                        [class.faded]="isInRange(date)"
+                                       >
+                                         {{ date.day }}
+                                       </span>
+                                     </ng-template>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="col-md-2">
+                                <a [routerLink]="['/searchresult']"><button type="button" class="btn btn-warning wrn-btn">Search</button></a>
+
+
+                          </div>
+
+                      </div>
+
+                    </div>
+            </form>
+
+    </section>
+
+
+                </div>
+              </div>
+
+
+    <br><br><br><br><br>
+        </div>
+        <div class="separator separator-bottom separator-skew zindex-100">
+          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+      </section>
